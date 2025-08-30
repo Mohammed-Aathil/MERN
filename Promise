@@ -1,0 +1,14 @@
+const prepareFood = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve('Food is ready');
+        }, 5000)
+    })
+}
+const startCooking = async () => {
+    console.log('Cooking started');
+    const message = await prepareFood();
+    console.log(message);
+}
+
+startCooking();
